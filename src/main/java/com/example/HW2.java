@@ -12,9 +12,9 @@ public final class HW2 {
      * @param args The arguments of the program.
      */
     public static void main(String[] args) {
-        int[] array1 = new int[10];
-        int[] array2 = new int[10];
-        int[] array3 = new int[5];
+        double[] array1 = new double[10];
+        double[] array2 = new double[10];
+        double[] array3 = new double[5];
         Random rnd = new Random();
         for(int i=0;i < array1.length;i++){
             array1[i] = rnd.nextInt(10);
@@ -26,11 +26,11 @@ public final class HW2 {
         printarray(difference(array1, array3));
     }
 
-    public static int[] difference(int[] arr1,int[] arr2){
-        int[] result = new int[arr1.length];
+    public static double[] difference(double[] arr1,double[] arr2){
+        double[] result = new double[arr1.length];
         if(arr1.length== arr2.length){
             for(int i=0;i<arr1.length;i++){
-                result[i]=arr1[i]-arr2[i];
+                result[i]=arr1[i]/arr2[i];
             }
             return result;
         } else {
@@ -38,8 +38,8 @@ public final class HW2 {
         }
     }
 
-    public static void printarray(int[] arr){
-        for (int i : arr) {
+    public static void printarray(double[] array1){
+        for (double i : array1) {
             System.out.print(i);
             System.out.print(" ");
         }
